@@ -1,5 +1,6 @@
 package Movie_Ticket_booking_System;
 
+import java.util.Collections;
 import java.util.List;
 
 import Movie_Ticket_booking_System.Enums.BookingStatus;
@@ -22,5 +23,23 @@ public class Booking {
     }
     public void confirm(){
         status=BookingStatus.CONFIRMED;
+    }
+    public void cancel(){
+        status = BookingStatus.CANCELLED;
+    }
+    public int getId(){
+        return id;
+    }
+    public List<ShowSeat> getSeats(){
+        return Collections.unmodifiableList(seats);
+    }
+    public double getTotalAmount(){
+        return totalAmount;
+    }
+    public BookingStatus getStatus(){
+        return status;
+    }
+    public Show getShow(){
+        return show;
     }
 }

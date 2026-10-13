@@ -38,11 +38,10 @@ public class Show {
         return startTime;
     }
 
-    public ShowSeat getShowSeat(int seatId) {
-        return map.get(seatId);
-    }
-
     public Collection<ShowSeat> getShowSeats() {
         return Collections.unmodifiableCollection(map.values());
+    }
+    public ShowSeat getShowSeat(String seatId) {
+        throw new UnsupportedOperationException("Unimplemented method 'getShowSeat'");
     }
 }
